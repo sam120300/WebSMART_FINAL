@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2024 at 05:20 PM
+-- Generation Time: Oct 07, 2024 at 03:23 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -70,7 +70,6 @@ INSERT INTO `archive_list` (`id`, `curriculum_id`, `year`, `title`, `type`, `sty
 (16, 31, 2024, 'Telemedicine: Evaluating Its Effectiveness in Rural Healthcare Delivery', 0, 0, 'uploads/abstracts/abstract-16.pdf?v=1726617620', '&lt;p&gt;123&lt;/p&gt;', '', 'uploads/pdf/document-16.pdf?v=1726617620', 1, NULL, '2024-09-18 08:00:20', '2024-09-29 15:39:56', 2, 357, 'PNC Administrator'),
 (17, 32, 2016, 'Exploring the Role of Gut Microbiota in the Development of Type 2 Diabetes', 0, 0, 'uploads/abstracts/abstract-17.pdf?v=1726617704', '&lt;p&gt;123&lt;/p&gt;', '', 'uploads/pdf/document-17.pdf?v=1726617704', 1, NULL, '2024-09-18 08:01:44', '2024-09-29 15:39:56', 2, 370, 'PNC Administrator'),
 (18, 26, 2022, 'The Long-Term Psychological Impact of COVID-19 on Frontline Healthcare Workers', 0, 0, 'uploads/abstracts/abstract-18.pdf?v=1726617726', '&lt;p&gt;123&lt;/p&gt;', '', 'uploads/pdf/document-18.pdf?v=1726617726', 1, NULL, '2024-09-18 08:02:06', '2024-09-29 15:39:56', 2, 357, 'PNC Administrator'),
-(19, 33, 2021, 'Energy-Efficient Building Materials: A Comparative Analysis of Insulation Technologies', 0, 0, 'uploads/abstracts/abstract-19.pdf?v=1726617746', '&lt;p&gt;123&lt;/p&gt;', '', 'uploads/pdf/document-19.pdf?v=1726617747', 0, NULL, '2024-09-18 08:02:26', '2024-09-18 08:45:06', 2, 180, 'PNC Administrator'),
 (20, 34, 2015, '3D Printing in Aerospace: Advancements and Challenges in Structural Design', 0, 0, 'uploads/abstracts/abstract-20.pdf?v=1726617767', '&lt;p&gt;123&lt;/p&gt;', '', 'uploads/pdf/document-20.pdf?v=1726617767', 1, NULL, '2024-09-18 08:02:47', '2024-09-29 15:39:56', 2, 278, 'PNC Administrator'),
 (21, 32, 2020, 'asda', 0, 0, '', '&lt;p&gt;asd&lt;/p&gt;', '', '', 0, NULL, '2024-09-20 21:13:41', NULL, 0, 0, 'CHRISTIAN SAMONTE'),
 (22, 29, 2020, 'asdasda', 0, 0, 'uploads/abstracts/abstract-22.pdf?v=1726838064', '&lt;p&gt;asdadsas&lt;/p&gt;', '', 'uploads/pdf/document-22.pdf?v=1726838064', 0, NULL, '2024-09-20 21:14:24', '2024-09-20 21:14:24', 1, 0, 'CHRISTIAN SAMONTE'),
@@ -160,6 +159,7 @@ INSERT INTO `department_list` (`id`, `name`, `description`, `status`, `date_crea
 CREATE TABLE `forms_list` (
   `id` int(30) NOT NULL,
   `title` text NOT NULL,
+  `department_id` varchar(255) NOT NULL,
   `document_path` text NOT NULL,
   `student_id` int(30) DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
@@ -167,15 +167,6 @@ CREATE TABLE `forms_list` (
   `date_updated` datetime DEFAULT NULL ON UPDATE current_timestamp(),
   `submitted_by` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `forms_list`
---
-
-INSERT INTO `forms_list` (`id`, `title`, `document_path`, `student_id`, `status`, `date_created`, `date_updated`, `submitted_by`) VALUES
-(3, 'test', 'uploads/forms/form-3.pdf?v=1726841110', NULL, 1, '2024-09-20 22:05:10', '2024-09-20 22:57:45', 'CHRISTIAN SAMONTE'),
-(4, 'Sample FO form', 'uploads/forms/form-4.pdf?v=1726842796', NULL, 1, '2024-09-20 22:33:16', '2024-09-20 22:56:11', 'CHRISTIAN SAMONTE'),
-(5, 'Sample FO 2', 'uploads/forms/form-5.pdf?v=1726847029', NULL, 1, '2024-09-20 23:43:49', '2024-09-20 23:44:57', 'PNC Administrator');
 
 -- --------------------------------------------------------
 
@@ -402,7 +393,7 @@ ALTER TABLE `department_list`
 -- AUTO_INCREMENT for table `forms_list`
 --
 ALTER TABLE `forms_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `student_list`
