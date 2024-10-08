@@ -27,7 +27,7 @@
                         </dl>
                     </div>
 
-                    <!-- Meet Our Team Section -->
+                    <!-- Meet Our Team Section -->iphone 13 pro
                     <h2 class="text-center">Meet Our Team</h2>
                     <center><hr class="bg-navy border-navy w-25 border-2"></center>
                     <div class="row justify-content-center" style="transform: scale(0.8)">
