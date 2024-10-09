@@ -147,7 +147,12 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
+                                <div class="form-group text-left">
+                                    <a href="./index.php" class="btn btn-default bg-success btn-flat">Back</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
                                 <div class="form-group text-right">
                                     <button class="btn btn-default bg-success btn-flat register" >Register</button>
                                 </div>

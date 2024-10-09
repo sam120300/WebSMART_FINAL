@@ -75,13 +75,14 @@ $user_type = ($_settings->userdata('user_type'));
                 } 
                 ?>
               
-              "><img src="<?= validate_image($_settings->userdata('avatar')) ?>" alt="User Avatar" id="student-img-avatar"></a>  
-            </span>
-            <span class="mx-2 d-none d-sm-inline" style="color: white; position: relative;">
-                Hello, <?= $_settings->userdata('firstname') ." ".$_settings->userdata('lastname')?>
-            </span>
+              "><img src="<?= validate_image($_settings->userdata('avatar')) ?>" alt="User Avatar" id="student-img-avatar"></a>  </span>
+            
             <span class="mx-1" style="position: relative; color:  white;">
-                <a class="dropdown-toggle text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                <a class="dropdown-toggle text-light" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="mx-2 d-none d-sm-inline" style="color: white; position: relative;">
+                    Hello, <?= $_settings->userdata('firstname') ." ".$_settings->userdata('lastname')?>
+                </span>
+              </a>
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <?php if($_settings->userdata('type') != 2){?>

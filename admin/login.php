@@ -39,7 +39,7 @@
   <div class="h-100 d-flex align-items-center w-100"  id="login">
     <div class="col-7 h-100 d-flex align-items-center justify-content-center">
       <div class="">
-        <center><img src="../uploads/2024 LOGO/pnc logo.png" style="transform: scale(0.1); margin-top: -300px"></center>
+        <center><img src="../uploads/2024 LOGO/pnc logo.png" style="transform: scale(0.2); margin-top: -300px"></center>
       </div>
       
     </div>
